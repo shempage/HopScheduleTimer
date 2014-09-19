@@ -121,8 +121,8 @@ end
 
 function setup()
     
-    displayMode(FULLSCREEN)
- --   displayMode(FULLSCREEN_NO_BUTTONS)
+ --   displayMode(FULLSCREEN)
+    displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
 
     

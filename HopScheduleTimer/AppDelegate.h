@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  Hop Schedule Timer
 //
-//  Created by Shem on Tuesday, 16 September 2014
-//  Copyright (c) Shem. All rights reserved.
+//  Created by starter4ten on Friday, 19 September 2014
+//  Copyright (c) starter4ten. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
