@@ -1,6 +1,13 @@
 import os, sys, filecmp, shutil, glob, zipfile, fileinput, subprocess
 
+workspace = os.environ['WORKSPACE']
+sys.path.append(workspace)
+
+print(workspace)
+
+
 from mod_pbxproj import XcodeProject
+
 buildFolder = os.path.join(workspace, "CurrentBuild")
 projectToBuild = "HopScheduleTimer"
 addonsFolder = os.path.join(workspace, 'Addons')
