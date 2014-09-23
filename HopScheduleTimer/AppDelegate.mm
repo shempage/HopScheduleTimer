@@ -2,7 +2,7 @@
 //  AppDelegate.mm
 //  Hop Schedule Timer
 //
-//  Created by starter4ten on Tuesday, 23 September 2014
+//  Created by starter4ten on Friday, 19 September 2014
 //  Copyright (c) starter4ten. All rights reserved.
 //
 
@@ -15,6 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[CodeaViewController alloc] init];
+	
+	self.disableScreenTimerAddOn = [[DisableScreenTimerAddOn alloc] init];
+    [self.viewController registerAddon:self.disableScreenTimerAddOn];
     
     NSString* projectPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"HopScheduleTimer.codea"];
     
