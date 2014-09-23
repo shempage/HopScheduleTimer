@@ -8,12 +8,12 @@ print(workspace)
 
 from mod_pbxproj import XcodeProject
 
-buildFolder = os.path.join(workspace, "CurrentBuild")
+# buildFolder = os.path.join(workspace, "CurrentBuild")
 projectToBuild = "HopScheduleTimer"
 addonsFolder = os.path.join(workspace, 'Addons')
 
 
-projectPath = os.path.join(buildFolder, projectToBuild + ".xcodeproj", "project.pbxproj")
+projectPath = os.path.join(workspace, projectToBuild + ".xcodeproj", "project.pbxproj")
 project = XcodeProject.Load(projectPath)
 project_group = project.get_or_create_group(projectToBuild)
 print("  Shem Adding all addons to the Xcode project...")
