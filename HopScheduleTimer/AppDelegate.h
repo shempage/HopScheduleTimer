@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  Hop Schedule Timer
 //
-//  Created by starter4ten on Friday, 19 September 2014
+//  Created by starter4ten on Tuesday, 23 September 2014
 //  Copyright (c) starter4ten. All rights reserved.
 //
 
