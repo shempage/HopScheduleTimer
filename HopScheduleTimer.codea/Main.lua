@@ -122,17 +122,14 @@ end
 
 function     disableSleep()
     if _disableScreenTimer ~= nill then
-        wibble = _disableScreenTimer()
-        print("now hearthis "..wibble)
-    
-    else print("nope")
-        end
+        _disableScreenTimer()
+	end
 end
 
 function setup()
     disableSleep()
  --   displayMode(FULLSCREEN)
-    --displayMode(FULLSCREEN_NO_BUTTONS)
+    displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
 
     
