@@ -1,6 +1,8 @@
 #import "CodeaAddon.h"
-#import <Foundation/Foundation.h>
 
+@interface DisableScreenTimerAddOn : NSObject<CodeaAddon>
 
-static int disableScreenTimer();
+static int _disableScreenTimer(struct lua_State *state);
+
+@end
 
