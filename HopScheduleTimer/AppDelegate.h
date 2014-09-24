@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DisableScreenTimerAddOn.h"
+#import "LocalNotificationAddOn.h"
 
 
 @class CodeaViewController;
@@ -17,6 +18,8 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) DisableScreenTimerAddOn  *disableScreenTimerAddOn;
+
+@property (strong, nonatomic) LocalNotificationAddOn  *localNotificationAddOn;
 
 @property (strong, nonatomic) CodeaViewController *viewController;
 
