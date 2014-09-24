@@ -39,17 +39,17 @@ static LocalNotificationAddOn *localNotificationAddOn;
     
     //  Register the functions, defined below
     
-    lua_register(L, "_localNotification", _localNotification);
+    lua_register(L, "_createLocalNotification", _createLocalNotification);
 }
 
-static int _localNotification(struct lua_State *state)
+static int _createLocalNotification(struct lua_State *state)
 {
 	 // Schedule the notification
     NSLog(@"Schedule notification");
 
 	UILocalNotification* localNotification = [[UILocalNotification alloc] init]; 
 	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
-	localNotification.alertBody = @"Shem alert message";
+	localNotification.alertBody = @"Time to add hops";
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
 	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
 

@@ -2,7 +2,7 @@
 //  AppDelegate.mm
 //  Hop Schedule Timer
 //
-//  Created by starter4ten on Friday, 19 September 2014
+//  Edited by hand, don't replace with the one from codea export
 //  Copyright (c) starter4ten. All rights reserved.
 //
 
