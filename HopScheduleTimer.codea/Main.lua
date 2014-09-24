@@ -12,17 +12,23 @@ function startTimer()
 end
 
 function createLocalNotification()
-    if _localNotification ~= nill then
-        _localNotification()
-		print("local timer created")
-        else print("nope Sorry")
+    if _createLocalNotification ~= nill then
+        _createLocalNotification()
+        print("yes shem")
 	end
+end
+
+function clearAllLocalNotifications()
+    if _clearAllLocalNotifications ~= nill then
+        _clearAllLocalNotifications()
+    end
 end
 
 function resetTimer()
     if timerRunning then
         timerRunning = false
         setAlarmRecordsToZero()
+        clearAllLocalNotifications()
     end
 end
 

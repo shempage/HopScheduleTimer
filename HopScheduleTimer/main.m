@@ -2,7 +2,7 @@
 //  main.m
 //  Hop Schedule Timer
 //
-//  Created by starter4ten on Wednesday, 24 September 2014
+//  Created by starter4ten on Thursday, 25 September 2014
 //  Copyright (c) starter4ten. All rights reserved.
 //
 
