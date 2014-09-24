@@ -8,6 +8,15 @@ function startTimer()
     end
     timerRunning = true
     startTimerTime=os.time()
+    createLocalNotification()
+end
+
+function createLocalNotification()
+    if _localNotification ~= nill then
+        _localNotification()
+		print("local timer created")
+        else print("nope Sorry")
+	end
 end
 
 function resetTimer()
@@ -120,24 +129,16 @@ function setAlarmRecordsToZero()
 end
 
 
-function disableSleep()
+function     disableSleep()
     if _disableScreenTimer ~= nill then
         _disableScreenTimer()
-	end
-end
-
-function createLocalNotification()
-	if _localNotification ~= nill then
-        _localNotification()
-		print("local timer created")
-	end
+    end
 end
 
 function setup()
     disableSleep()
-	createLocalNotification()
  --   displayMode(FULLSCREEN)
-    --displayMode(FULLSCREEN_NO_BUTTONS)
+   -- displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
 
     

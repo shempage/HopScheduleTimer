@@ -96,10 +96,8 @@ function HopNumberBox:keyboard(key, maxNumber)
     if maxNumber == nil then
         maxNumber = 999
     end
-                print("shem")
     
     if self.focus==true then
-                    print("shemfouc")
         if key==BACKSPACE then
             if string.len(self.boxnumber)>0 then
                 self.boxnumber=string.sub(self.boxnumber,1,string.len(self.boxnumber)-1)
