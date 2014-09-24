@@ -45,6 +45,7 @@ static LocalNotificationAddOn *localNotificationAddOn;
 static int _localNotification(struct lua_State *state)
 {
 	 // Schedule the notification
+    NSLog(@"Schedule notification");
 
 	UILocalNotification* localNotification = [[UILocalNotification alloc] init]; 
 	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
