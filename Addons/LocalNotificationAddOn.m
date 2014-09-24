@@ -44,12 +44,16 @@ static LocalNotificationAddOn *localNotificationAddOn;
 
 static int _localNotification(struct lua_State *state)
 {
-	UILocalNotification* localNotification = [[UILocalNotificationalloc] init]; 
+	 // Schedule the notification
+
+	UILocalNotification* localNotification = [[UILocalNotification alloc] init]; 
 	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
 	localNotification.alertBody = @"Shem alert message";
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
+	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-	
+   
     return 1;
 }
 
