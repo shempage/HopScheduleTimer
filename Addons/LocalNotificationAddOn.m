@@ -40,6 +40,8 @@ static LocalNotificationAddOn *localNotificationAddOn;
     //  Register the functions, defined below
     
     lua_register(L, "_createLocalNotification", _createLocalNotification);
+	lua_register(L, "_clearAllLocalNotifications", _clearAllLocalNotifications);
+
 }
 
 static int _createLocalNotification(struct lua_State *state)
@@ -51,11 +53,20 @@ static int _createLocalNotification(struct lua_State *state)
 	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:60];
 	localNotification.alertBody = @"Time to add hops";
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
-	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+	localNotification.soundName = UILocalNotificationDefaultSoundName;
+	//localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
 
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
    
     return 1;
+}
+
+static void _clearAllLocalNotifications(struct lua_State *state)
+{
+
+	// cancel all existing notifications
+    [[UIApplication sharedApplication]cancelAllLocalNotifications];
+	
 }
 
 @end
