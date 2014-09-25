@@ -44,7 +44,7 @@ static LocalNotificationAddOn *localNotificationAddOn;
 
 }
 
-static int _createLocalNotification(struct lua_State *state)
+static void _createLocalNotification()
 {
 	 // Schedule the notification
     NSLog(@"Schedule notification");
@@ -57,11 +57,10 @@ static int _createLocalNotification(struct lua_State *state)
 	//localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
 
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-   
-    return 1;
+
 }
 
-static void _clearAllLocalNotifications(struct lua_State *state)
+static void _clearAllLocalNotifications()
 {
 
 	// cancel all existing notifications
