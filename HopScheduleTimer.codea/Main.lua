@@ -11,12 +11,15 @@ function startTimer()
     createLocalNotification()
 end
 
--- Calls native code in addons
+-- Calls native code in addons to create local notification for
+-- all hop times excluding the first hop entries.
+-- also, dont have duplicate notifications for the same time
 function createLocalNotification()
     local uniqueStartTimeTable={}
     for i,v in ipairs(indexedTableOfAll) do
-        
-        uniqueStartTimeTable[v.time] = 1 -- unique insertion
+        if(v.time ~= boilTime) then
+            uniqueStartTimeTable[v.time] = 1 -- unique insertion
+        end
     end
    
     if _createLocalNotification ~= nill then
@@ -26,7 +29,7 @@ function createLocalNotification()
 	end
 end
 
--- Calls native code in addons
+-- Calls native code in addons to clear all notifications
 function clearAllLocalNotifications()
     if _clearAllLocalNotifications ~= nill then
         _clearAllLocalNotifications()
@@ -153,9 +156,8 @@ end
 function setup()
     disableSleep()
  --   displayMode(FULLSCREEN)
-   -- displayMode(FULLSCREEN_NO_BUTTONS)
+    displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
-
     
     timerFont = "Copperplate-Bold"
     inputFont= "Courier"
@@ -169,8 +171,7 @@ function setup()
     timerRadius = 200
     timerFontSize = 45
     listHopsFontSize = 39
-    
-    
+     
     tx, ty = WIDTH -(timerRadius*1.25), HEIGHT / 2  
     
     boilTime = 60
