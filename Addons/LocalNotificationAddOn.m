@@ -44,13 +44,14 @@ static LocalNotificationAddOn *localNotificationAddOn;
 
 }
 
-static void _createLocalNotification(int numberOfMinutes)
+static void _createLocalNotification(struct lua_State *state)
 {
 	 // Schedule the notification
     NSLog(@"Schedule notification");
-
+	int numberOfMinutes = lua_tointeger(state, 1);
+	int numberOfSeconds = numberOfMinutes * 60;
 	UILocalNotification* localNotification = [[UILocalNotification alloc] init]; 
-	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:numberOfMinutes*60];
+	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:numberOfSeconds];
 	localNotification.alertBody = @"Time to add hops";
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
 	localNotification.soundName = UILocalNotificationDefaultSoundName;

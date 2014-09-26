@@ -2,7 +2,7 @@
 
 @interface LocalNotificationAddOn : NSObject<CodeaAddon>
 
-static void _createLocalNotification(int numberOfMinutes);
+static void _createLocalNotification(struct lua_State *state);
 static void _clearAllLocalNotifications();
 
 
