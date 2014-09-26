@@ -18,7 +18,7 @@ end
 function createLocalNotification()
     local uniqueStartTimeTable={}
     for i,v in ipairs(indexedTableOfAll) do
-        if(v.time == boilTime) then
+        if(v.time ~= boilTime) then
             uniqueStartTimeTable[boilTime-v.time] = 1 -- unique insertion for when insert notification should fire
         else
             uniqueStartTimeTable[boilTime] = 1 -- unique insertion for when final notification should fire
