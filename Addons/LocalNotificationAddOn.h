@@ -2,7 +2,7 @@
 
 @interface LocalNotificationAddOn : NSObject<CodeaAddon>
 
-static void _createLocalNotification();
+static void _createLocalNotification(int numberOfMinutes);
 static void _clearAllLocalNotifications();
 
 
