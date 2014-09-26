@@ -11,13 +11,22 @@ function startTimer()
     createLocalNotification()
 end
 
+-- Calls native code in addons
 function createLocalNotification()
+    local uniqueStartTimeTable={}
+    for i,v in ipairs(indexedTableOfAll) do
+        
+        uniqueStartTimeTable[v.time] = 1 -- unique insertion
+    end
+   
     if _createLocalNotification ~= nill then
-        _createLocalNotification()
-        print("yes shem")
+        for i,v in pairs(uniqueStartTimeTable) do
+            _createLocalNotification(i)
+        end
 	end
 end
 
+-- Calls native code in addons
 function clearAllLocalNotifications()
     if _clearAllLocalNotifications ~= nill then
         _clearAllLocalNotifications()
@@ -83,7 +92,8 @@ function keyboard(key)
 end
 
 function toggleTimerButton()
-     
+    loadHopsFromInput()
+    sortHopsInTimeOrder()
     font(bntFont)
     fontSize(inputFontSize)
     if timerRunning then
@@ -91,7 +101,6 @@ function toggleTimerButton()
         button.displayName = "Start Timer"
     else
         setAlarmRecordsToZero()
-        loadHopsFromInput()      
         startTimer()
         button.displayName = "Stop Timer and Reset"
     end
