@@ -12,16 +12,16 @@ function startTimer()
 end
 
 -- Calls native code in addons to create local notification for
--- all hop times excluding the first hop entries.
+-- all hop times excluding the first hop entries as that happens as soon as they start timer
 -- also, dont have duplicate notifications for the same time
 function createLocalNotification()
     local uniqueStartTimeTable={}
     for i,v in ipairs(indexedTableOfAll) do
         if(v.time ~= boilTime) then
-            uniqueStartTimeTable[v.time] = 1 -- unique insertion
+            uniqueStartTimeTable[boilTime-v.time] = 1 -- unique insertion for when notification should fire
         end
     end
-   
+
     if _createLocalNotification ~= nill then
         for i,v in pairs(uniqueStartTimeTable) do
             _createLocalNotification(i)
@@ -155,7 +155,7 @@ end
 
 function setup()
     disableSleep()
- --   displayMode(FULLSCREEN)
+ --displayMode(FULLSCREEN)
     displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
     
