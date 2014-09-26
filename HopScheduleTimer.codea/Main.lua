@@ -12,13 +12,16 @@ function startTimer()
 end
 
 -- Calls native code in addons to create local notification for
--- all hop times excluding the first hop entries as that happens as soon as they start timer
+-- all hop times excluding the first hop start as that happens as soon as they start time
+-- do include a boil complete notification
 -- also, dont have duplicate notifications for the same time
 function createLocalNotification()
     local uniqueStartTimeTable={}
     for i,v in ipairs(indexedTableOfAll) do
-        if(v.time ~= boilTime) then
-            uniqueStartTimeTable[boilTime-v.time] = 1 -- unique insertion for when notification should fire
+        if(v.time == boilTime) then
+            uniqueStartTimeTable[boilTime-v.time] = 1 -- unique insertion for when insert notification should fire
+        else
+            uniqueStartTimeTable[boilTime] = 1 -- unique insertion for when final notification should fire
         end
     end
 
