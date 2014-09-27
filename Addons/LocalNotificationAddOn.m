@@ -55,7 +55,7 @@ static void _createLocalNotification(struct lua_State *state)
 	localNotification.alertBody = @"Time to add hops";
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
 	localNotification.soundName = UILocalNotificationDefaultSoundName;
-	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+	localNotification.applicationIconBadgeNumber = 1;
 
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 
