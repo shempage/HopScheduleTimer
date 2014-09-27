@@ -39,7 +39,7 @@
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (locationNotification) {
         // Set icon badge number to zero
-        application.applicationIconBadgeNumber = 0;
+        application.applicationIconBadgeNumber = -1;
     }
     
     return YES;
@@ -77,7 +77,7 @@
     }
     
     // Set icon badge number to zero
-    application.applicationIconBadgeNumber = 0;
+    application.applicationIconBadgeNumber = -1;
 }
 
 @end
