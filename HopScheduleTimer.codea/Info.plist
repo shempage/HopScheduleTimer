@@ -10,6 +10,7 @@
 		<string>HopNumberBox</string>
 		<string>HopTextBox</string>
 		<string>Button</string>
+		<string>MakeChoice</string>
 		<string>RoundRect</string>
 	</array>
 	<key>Created</key>

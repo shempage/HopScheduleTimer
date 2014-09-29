@@ -55,6 +55,7 @@ function Button:hit(p)
 end
 
 function Button:touched(touch)
+
     -- Codea does not automatically call this method
     if touch.state == ENDED and
        self:hit(vec2(touch.x,touch.y)) then

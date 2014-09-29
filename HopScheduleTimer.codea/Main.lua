@@ -60,19 +60,21 @@ end
 
 function drawTimerButton()
     font(bntFont)
-    button.pos = vec2(WIDTH/2 ,button.size.y)
-    button:draw()
+    toggledButton.pos = vec2(WIDTH/2 ,toggledButton.size.y)
+    toggledButton:draw()
 end
 
 function drawclearAlarmButton()
     font(bntFont)
-    clearalarmbutton.pos = vec2(WIDTH -(button.size.x/2), button.size.y)
+    clearalarmbutton.pos = vec2(WIDTH -(toggledButton.size.x/2), clearalarmbutton.size.y)
     clearalarmbutton:draw()
 end
 
 function touched(touch)
     clearalarmbutton:touched(touch)
-    button:touched(touch)
+    toggledButton:touched(touch)
+    areYouSureChecker:touched(touch)
+
     for i,r in pairs(hoptextrow) do
         r.box:touched(touch)
         numbox = hopnumber[i]
@@ -103,14 +105,30 @@ function toggleTimerButton()
     font(bntFont)
     fontSize(inputFontSize)
     if timerRunning then
-        resetTimer()
-        button.displayName = "Start Timer"
+            displayAreYouSureChecker = true  --Let the pop up deal with results  
     else
         setAlarmRecordsToZero()
         startTimer()
-        button.displayName = "Stop Timer and Reset"
+        toggledButton.displayName = "Stop Timer and Reset"
     end
 end
+
+function drawAreYouSureChecker()
+    areYouSureChecker.pos = vec2(WIDTH/2 ,HEIGHT/2)
+    areYouSureChecker:draw()
+end
+
+function confirmResetTimer()
+    resetTimer()
+    toggledButton.displayName = "Start Timer"
+    displayAreYouSureChecker = false
+end
+
+function declineResetTimer()
+    displayAreYouSureChecker = false
+end
+
+
 
 function loadHopsFromInput()
     --Clean out all hop entries
@@ -210,11 +228,18 @@ function setup()
         
     
     -- set up timer start stop button
-    button = Button("Start Timer")
-    button.action = function () toggleTimerButton() end
+    toggledButton = Button("Start Timer")
+    toggledButton.action = function () toggleTimerButton() end
     
     clearalarmbutton = Button("Clear Alarms")
     clearalarmbutton.action = function () clearAlarm() end
+    
+    displayAreYouSureChecker = false
+    areYouSureChecker = MakeChoice(" This doesn't pause the timer.\n This stops the timer and resets to zero.\n Do you wish to reset the timer?",
+        function () declineResetTimer() end,
+        function () confirmResetTimer() end)
+  --  areYouSureChecker.postiveAction = function () confirmResetTimer() end
+    
      
 end
 function onHopCountChange()
@@ -270,6 +295,8 @@ function draw()
     if showClearAlarmButton then
         drawclearAlarmButton()
     end
+    
+   
         
     if timerRunning then
         drawArcsAndTimesInTimeOrder()
@@ -287,6 +314,10 @@ function draw()
         drawHopTitleBar()
         drawHopRow()
         drawaddhopButton()
+    end
+    
+     if displayAreYouSureChecker then
+        drawAreYouSureChecker()
     end
 
 end
@@ -551,7 +582,7 @@ function addhopRow()
     
         onHopCountChange()
         else
-        alert("","Maximum hops in schedule reached.")
+        alert("","Hop schedule is full.")
     end
     
 end

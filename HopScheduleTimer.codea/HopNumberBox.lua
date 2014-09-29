@@ -79,8 +79,10 @@ function HopNumberBox:hit(p)
 end
 
 function HopNumberBox:touched(touch)
+
     -- Codea does not automatically call this method
     if touch.state == ENDED and self:hit(vec2(touch.x,touch.y)) then
+
         self.focus=true
         showKeyboard()
         if self.action then
