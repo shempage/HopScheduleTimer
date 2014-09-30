@@ -4,7 +4,7 @@ function MakeChoice:init(choiceText, negativeAction, positiveAction)
     -- you can accept and set parameters here
     self.choiceText = choiceText
     self.fontsize = 22
-        self.color = color(113, 66, 190, 255)
+        self.color = color(190, 65, 69, 255)
 
     self.pos = vec2(0,0)
     self.size = vec2(0,0)

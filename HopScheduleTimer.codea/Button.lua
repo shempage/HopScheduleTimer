@@ -9,7 +9,7 @@ function Button:init(displayName, buttonAction)
     self.size = vec2(0,0)
     self.action = nil
     self.action = buttonAction
-    self.color = color(113, 66, 190, 255)
+    self.color = color(65, 65, 190, 255)
 end
 
 function Button:draw()
