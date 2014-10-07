@@ -2,7 +2,7 @@
 //  CodeaViewController.h
 //  Hop Schedule Timer
 //
-//  Created by starter4ten on Tuesday, 30 September 2014
+//  Created by starter4ten on Tuesday, 7 October 2014
 //  Copyright (c) starter4ten. All rights reserved.
 //
 

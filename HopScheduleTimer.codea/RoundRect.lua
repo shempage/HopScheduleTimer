@@ -2,7 +2,7 @@ function roundRect(x,y,w,h,r)
     pushStyle()
     
     insetPos = vec2(x+r,y+r)
-    insetSize = vec2(w-2*r,h-2*r)
+    insetSize = vec2(w-(2*r),h-(2*r))
     
     --Copy fill into stroke
     local red,green,blue,a = fill()

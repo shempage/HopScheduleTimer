@@ -3,8 +3,8 @@ MakeChoice = class()
 function MakeChoice:init(choiceText, negativeAction, positiveAction)
     -- you can accept and set parameters here
     self.choiceText = choiceText
-    self.fontsize = 22
-        self.color = color(190, 65, 69, 255)
+    self.fontsize = 0
+    self.color = color(19, 65, 69, 255)
 
     self.pos = vec2(0,0)
     self.size = vec2(0,0)
@@ -25,22 +25,25 @@ function MakeChoice:draw()
     
     -- use name for size
     local w,h = textSize(self.choiceText)
-    w = w + 20
-    h = self.fontsize + 30
+    w = w+(self.fontsize*2)
+    h = self.fontsize * 2
     
-    roundRect(self.pos.x - w/2, self.pos.y-(h),w,h,60)
+    roundRect(self.pos.x - w/2, self.pos.y-(h),w,h,self.fontsize *3)
             
     self.size = vec2(w,h)
             
     textMode(CENTER)
     fill(54, 65, 96, 255)
-    text(self.choiceText,self.pos.x+2,self.pos.y-2)
+    text(self.choiceText,self.pos.x,self.pos.y)
     fill(255, 255, 255, 255)
     text(self.choiceText,WIDTH/2,HEIGHT/2)
     
-    yesButton.pos = vec2(WIDTH/2+80 ,self.pos.y-80)
+    yesButton.pos = vec2(WIDTH/2+(self.fontsize*5) ,self.pos.y-(self.fontsize*4))
+    yesButton.fontsize=self.fontsize
     yesButton:draw()
-    noButton.pos = vec2(WIDTH/2-80 ,self.pos.y-80)
+    noButton.pos = vec2(WIDTH/2-(self.fontsize*5) ,self.pos.y-(self.fontsize*4))
+    noButton.fontsize=self.fontsize
+
     noButton:draw()
     
     

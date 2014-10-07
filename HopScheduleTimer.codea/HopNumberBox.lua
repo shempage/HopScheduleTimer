@@ -21,8 +21,8 @@ function HopNumberBox:draw()
     fill(240)
 
     local w,h
-    w = 50
-    h = 36
+    w = self.fontsize * 2.5
+    h = self.fontsize * 2
     
     posx = self.pos.x
     posy = self.pos.y
@@ -30,13 +30,12 @@ function HopNumberBox:draw()
     if isKeyboardShowing() == true and self.focus == true then
         --highlight and center box under edit
         fill(69, 206, 14, 255)
-        posx=200
         posy=HEIGHT/2        
     end
     if isKeyboardShowing() == true and self.focus == false then
         -- grey out and move away box not under edit
         fill(145, 156, 141, 255)
-        if posy-50<HEIGHT/2 then
+        if posy-(self.fontsize * 2)<HEIGHT/2 then
             posy=0
         end
     end
@@ -44,7 +43,7 @@ function HopNumberBox:draw()
     
     roundRect(posx - w/2,
     posy - h/2,
-    w,h,20)
+    w,h,self.fontsize)
     
     self.size = vec2(w,h)
     stroke(0,10,255,255)
@@ -53,14 +52,14 @@ function HopNumberBox:draw()
     
     if blink() and self.focus==true then
         a=((posx*2)/2+textSize(self.boxnumber)/2)+3
-        b=posy+20
-        c=posy-20
+        b=posy+(self.fontsize*3/4)
+        c=posy-(self.fontsize*3/4)
         line(a,b,a,c)
     end
     
     textMode(CENTER)
     fill(0)
-    text(self.boxnumber,posx+2,posy-2)
+    text(self.boxnumber,posx,posy)
       
     popStyle()
 end
@@ -117,7 +116,7 @@ function HopNumberBox:keyboard(key, maxNumber)
                 if tonumber(possibleboxnumber) <= tonumber(maxNumber) then
                     self.boxnumber = possibleboxnumber
                 else
-                    alert("", "This hops boil time should be less than "..maxNumber)
+                    alert("", "Hop boil time should "..maxNumber.." mins or less")
                 end
             end
             

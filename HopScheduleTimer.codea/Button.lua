@@ -3,14 +3,15 @@ Button = class()
 function Button:init(displayName, buttonAction)
     -- you can accept and set parameters here
     self.displayName = displayName
-    self.fontsize = 22
+    self.fontsize = 0
     
     self.pos = vec2(0,0)
     self.size = vec2(0,0)
     self.action = nil
     self.action = buttonAction
-    self.color = color(65, 65, 190, 255)
+    self.color = color(19, 65, 69, 255)
 end
+
 
 function Button:draw()
     fontSize(self.fontsize)
@@ -23,12 +24,12 @@ function Button:draw()
     
     -- use name for size
     local w,h = textSize(self.displayName)
-    w = w + 20
-    h = self.fontsize + 30
+    w = w+self.fontsize
+    h = self.fontsize * 2
     
     roundRect(self.pos.x - w/2,
               self.pos.y - h/2,
-              w,h,20)
+              w,h,self.fontsize)
             
     self.size = vec2(w,h)
             

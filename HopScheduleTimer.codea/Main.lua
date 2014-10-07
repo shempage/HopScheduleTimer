@@ -29,7 +29,7 @@ function createLocalNotification()
         for i,v in pairs(uniqueStartTimeTable) do
             _createLocalNotification(i)
         end
-	end
+    end
 end
 
 -- Calls native code in addons to clear all notifications
@@ -177,7 +177,7 @@ end
 function setup()
     disableSleep()
  --displayMode(FULLSCREEN)
-    displayMode(FULLSCREEN_NO_BUTTONS)
+   displayMode(FULLSCREEN_NO_BUTTONS)
     img = readImage("Documents:wall")
     
     timerFont = "Copperplate-Bold"
@@ -185,13 +185,14 @@ function setup()
     bntFont  = "AmericanTypewriter"
     remainingTimeFont="Optima-ExtraBlack"
     listHopsFont ="AmericanTypewriter"
-    inputFontSize = 22
+    
     textLabelColor = color(150, 173, 168, 255)
     
     timerRunning = false
-    timerRadius = 200
-    timerFontSize = 45
-    listHopsFontSize = 39
+    timerRadius = WIDTH*1/5
+    timerFontSize = timerRadius/5
+    listHopsFontSize = timerFontSize
+    inputFontSize = timerFontSize/2
      
     tx, ty = WIDTH -(timerRadius*1.25), HEIGHT / 2  
     
@@ -211,7 +212,7 @@ function setup()
     setAlarmRecordsToZero()
 
     hopColour = {
-    color(0, 0, 255, 120),
+    color(0, 0, 255, 180),
     color(255, 0, 0, 114),
     color(255, 255, 0, 111),
     color(255, 255, 255, 118),
@@ -224,23 +225,23 @@ function setup()
     color(93, 127, 124, 120)
     }
     overlayColour = color(113, 141, 141, 60)
-       alarmOverlayColour= color(255, 0, 0, 60)
+    alarmOverlayColour= color(255, 0, 0, 60)
         
     
     -- set up timer start stop button
     toggledButton = Button("Start Timer")
     toggledButton.action = function () toggleTimerButton() end
+    toggledButton.fontsize = inputFontSize
     
     clearalarmbutton = Button("Clear Alarms")
     clearalarmbutton.action = function () clearAlarm() end
+    clearalarmbutton.fontsize = inputFontSize
     
     displayAreYouSureChecker = false
-    areYouSureChecker = MakeChoice(" This doesn't pause the timer.\n This stops the timer and resets to zero.\n Do you wish to reset the timer?",
+    areYouSureChecker = MakeChoice(" Warning this doesn't pause the timer.\n It stops the timer and resets to zero.\n Do you wish to reset the timer?",
         function () declineResetTimer() end,
         function () confirmResetTimer() end)
-  --  areYouSureChecker.postiveAction = function () confirmResetTimer() end
-    
-     
+    areYouSureChecker.fontsize=inputFontSize
 end
 function onHopCountChange()
     colourWidth = timerRadius/hopCount
@@ -254,16 +255,15 @@ function setupInputForm()
     alwaysInc = 1
     rowLimit=10
 
-    hint = "Hop"
     hoptextrow = {}
     hopnumber = {}
     delhoprowbutton={}
  
-    hoptextrow[alwaysInc]={rowname=alwaysInc,box=HopTextBox(hint) }
+    hoptextrow[alwaysInc]={rowname=alwaysInc,box=HopTextBox() }
     hopnumber[alwaysInc]={rowname=alwaysInc, box=HopNumberBox(boilTime)}
     delhoprowbutton[alwaysInc]={rowname=alwaysInc, btn=Button("we never see this button")}
     _G["startTime_"..hopCount] = boilTime
-    _G["hopName_"..hopCount]=hint
+    _G["hopName_"..hopCount]=""
     hopCount = hopCount +1
     onHopCountChange()
 
@@ -273,6 +273,8 @@ function setupInputForm()
     
     -- set up button for adding new hop row
     addhopbutton = Button("Add hop", function () addhopRow() end)
+    addhopbutton.fontsize = inputFontSize
+
 
 end
 
@@ -332,8 +334,8 @@ function drawHopTitleBar()
     fill(textLabelColor)
     font(inputFont)
     fontSize(inputFontSize)
-    text("  Hop details, eg name.",30, HEIGHT-(25))
-    text("|Boil", 390, HEIGHT-25)
+   -- text("  Hop details, eg name.",30, HEIGHT-(25))
+--    text("|Boil", 390, HEIGHT-25)
 end
 
 function drawArcsAndTimesInTimeOrder()
@@ -510,13 +512,15 @@ end
 --
 --also, draw grey out box over hopslist already past time
 function listHopsInTimeOrder()
-    textIndent = 20
-    textLength = 500
+    textIndent = timerRadius/5
+
+    textLength = WIDTH*1/2
     colourHopAlarmed = 0
-    sortHopsInTimeOrder() -- testing only, must remove
+    --sortHopsInTimeOrder() -- testing only, must remove
     textMode(CORNER)
     font(listHopsFont)
     fontSize(listHopsFontSize)
+    offset = listHopsFontSize
 
     for i,v in ipairs(indexedTableOfAll) do
         myIndexTable={}
@@ -526,9 +530,9 @@ function listHopsInTimeOrder()
         hopTableIndex = tonumber(myIndexTable[2])
         local hopName = _G["hopName_"..hopTableIndex]
         fill(hopColour[hopTableIndex+1])
-        if v.time == 0 then timeString=":flame out" else timeString=":"..tostring(v.time).." mins" end
+        if v.time == 0 then timeString="@flame out" else timeString="@"..tostring(v.time).." mins" end
         
-        text(hopName.." "..timeString,listHopsFontSize, HEIGHT-(50+(listHopsFontSize*i)))
+        text(hopName.." "..timeString,listHopsFontSize, HEIGHT-(offset+(listHopsFontSize*i)))
         myIndexTable=nil --think i need this for gc
         -- set for alarm colour over list
         if isAlarming[i] then
@@ -541,7 +545,7 @@ function listHopsInTimeOrder()
         rectMode(CORNERS)
         fill(overlayColour)
         strokeWidth(1)
-        offset = 50
+        
         rect(textIndent,
             HEIGHT-offset, 
             textLength, 
@@ -572,12 +576,12 @@ function addhopRow()
     if rowcount<=rowLimit then
         alwaysInc = alwaysInc + 1
         local rowToDelete=alwaysInc
-        hoptextrow[alwaysInc]={rowname=alwaysInc,box=HopTextBox(hint) }
+        hoptextrow[alwaysInc]={rowname=alwaysInc,box=HopTextBox() }
         hopnumber[alwaysInc]={rowname=alwaysInc, box=HopNumberBox(0)}
         delhoprowbutton[alwaysInc]={rowname=alwaysInc, btn=Button("del", function() delhop(rowToDelete) end)}
         --These entries will be overriden once the start timer button is hit, but loading them now helps with UI
         _G["startTime_"..hopCount] = boilTime
-        _G["hopName_"..hopCount]=hint
+        _G["hopName_"..hopCount]="Hop"
         hopCount = hopCount +1
     
         onHopCountChange()
@@ -588,7 +592,7 @@ function addhopRow()
 end
 
 function drawaddhopButton()
-    addhopbutton.pos = vec2(120,addhopbutton.size.y)
+    addhopbutton.pos = vec2(WIDTH*1/8,addhopbutton.size.y)
     addhopbutton:draw()
 end
 
@@ -611,32 +615,35 @@ end
     
 function drawHopRow()
     pushStyle()
-    local top = HEIGHT - 50
-    local left = 200
+    local top = HEIGHT - listHopsFontSize
+    local left = timerRadius
     -- slow if user has added alot and deleted lots, 
     -- but i had to so the are displayed in order of creation
     for i=1, alwaysInc do
         r = hoptextrow[i]
         if  r ~= nil then
-        r.box.pos = vec2(left,top)
-        r.box:draw()
-        numbox = hopnumber[i]
-        numbox.box.pos = vec2(left+220, top)
-        numbox.box:draw()
+            r.box.pos = vec2(left,top)
+            r.box.fontsize=inputFontSize
+            r.box:draw()
+            numbox = hopnumber[i]
+            numbox.box.pos = vec2(left+timerRadius+(listHopsFontSize/2), top)
+            numbox.box.fontsize=inputFontSize
+            numbox.box:draw()
         
-        if i==1 then
+            if i==1 then
                 textMode(CENTER)
                 fill(textLabelColor)
                 font(inputFont)
                 fontSize(inputFontSize)
-                text("- Max Boil Time.",left+370, top)            
-        else
-            delhopbutton = delhoprowbutton[i]
-            delhopbutton.btn.pos = vec2(left+290, top)
-            delhopbutton.btn:draw()
-        end
-        top = top - r.box.size.y - 20
+              --  text("- Max Boil Time.",left+370, top)            
+            else
+                delhopbutton = delhoprowbutton[i]
+                delhopbutton.btn.pos = vec2(left+timerRadius+(listHopsFontSize*2), top)
+                delhopbutton.btn.fontsize=inputFontSize
+                delhopbutton.btn:draw()
             end
+            top = top - r.box.size.y-(listHopsFontSize/2)
+        end
     end
     popStyle()
 end
