@@ -7,46 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D32C405DAFA8DB9C82C69C2C /* LocalNotificationAddOn.m */ = {isa = PBXBuildFile; fileRef = FBCF41BF85547D4699E1B8C8 /* LocalNotificationAddOn.m */; };
-		D68A48759BD929BBF82477E1 /* DisableScreenTimerAddOn.m */ = {isa = PBXBuildFile; fileRef = 9CEF4CA2BEF289E164FB55DE /* DisableScreenTimerAddOn.m */; };
-		DB0DC0AE18C459EC005F4723 /* Images.xcassets */ = {isa = PBXBuildFile; fileRef = DB0DC0AD18C459EC005F4723 /* Images.xcassets */; };
-		DB0DC0B618C46085005F4723 /* CoreImage.framework */ = {isa = PBXBuildFile; fileRef = DB0DC0B518C46085005F4723 /* CoreImage.framework */; };
-		DB0DC0B818C4608A005F4723 /* CoreLocation.framework */ = {isa = PBXBuildFile; fileRef = DB0DC0B718C4608A005F4723 /* CoreLocation.framework */; };
-		DB0DC0BA18C4608E005F4723 /* Accelerate.framework */ = {isa = PBXBuildFile; fileRef = DB0DC0B918C4608E005F4723 /* Accelerate.framework */; };
-		DB3B3F6317815CFE00A992DB /* Security.framework */ = {isa = PBXBuildFile; fileRef = DB3B3F6217815CFE00A992DB /* Security.framework */; };
-		DB5E404418CD80570001CC1F /* Social.framework */ = {isa = PBXBuildFile; fileRef = DB5E404318CD80570001CC1F /* Social.framework */; };
-		DB6F85F817DDD381004434B4 /* AssetPacks */ = {isa = PBXBuildFile; fileRef = DB6F85F717DDD381004434B4 /* AssetPacks */; };
-		DB8A004716F2DBDA005F87A6 /* UIKit.framework */ = {isa = PBXBuildFile; fileRef = DB8A004616F2DBDA005F87A6 /* UIKit.framework */; };
-		DB8A004916F2DBDA005F87A6 /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = DB8A004816F2DBDA005F87A6 /* Foundation.framework */; };
-		DB8A004B16F2DBDA005F87A6 /* CoreGraphics.framework */ = {isa = PBXBuildFile; fileRef = DB8A004A16F2DBDA005F87A6 /* CoreGraphics.framework */; };
-		DB8A005116F2DBDA005F87A6 /* InfoPlist.strings */ = {isa = PBXBuildFile; fileRef = DB8A004F16F2DBDA005F87A6 /* InfoPlist.strings */; };
-		DB8A005316F2DBDA005F87A6 /* main.m */ = {isa = PBXBuildFile; fileRef = DB8A005216F2DBDA005F87A6 /* main.m */; };
-		DB8A005716F2DBDA005F87A6 /* AppDelegate.mm */ = {isa = PBXBuildFile; fileRef = DB8A005616F2DBDA005F87A6 /* AppDelegate.mm */; };
-		DB8A006816F2E019005F87A6 /* libcodea.a */ = {isa = PBXBuildFile; fileRef = DB8A006316F2E019005F87A6 /* libcodea.a */; };
-		DB8A006A16F2E019005F87A6 /* libtools.a */ = {isa = PBXBuildFile; fileRef = DB8A006516F2E019005F87A6 /* libtools.a */; };
-		DB8A006B16F2E019005F87A6 /* RuntimeResources.bundle */ = {isa = PBXBuildFile; fileRef = DB8A006616F2E019005F87A6 /* RuntimeResources.bundle */; };
-		DB8A006C16F2E019005F87A6 /* ToolsResources.bundle */ = {isa = PBXBuildFile; fileRef = DB8A006716F2E019005F87A6 /* ToolsResources.bundle */; };
-		DB8A006F16F2E039005F87A6 /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = DB8A006E16F2E039005F87A6 /* QuartzCore.framework */; };
-		DB8A007116F2E069005F87A6 /* CoreMotion.framework */ = {isa = PBXBuildFile; fileRef = DB8A007016F2E069005F87A6 /* CoreMotion.framework */; };
-		DB8A007516F2E073005F87A6 /* libicucore.dylib */ = {isa = PBXBuildFile; fileRef = DB8A007416F2E073005F87A6 /* libicucore.dylib */; };
-		DB8A007716F2E084005F87A6 /* OpenAL.framework */ = {isa = PBXBuildFile; fileRef = DB8A007616F2E084005F87A6 /* OpenAL.framework */; };
-		DB8A007916F2E089005F87A6 /* AudioToolbox.framework */ = {isa = PBXBuildFile; fileRef = DB8A007816F2E089005F87A6 /* AudioToolbox.framework */; };
-		DB8A007B16F2E096005F87A6 /* AVFoundation.framework */ = {isa = PBXBuildFile; fileRef = DB8A007A16F2E096005F87A6 /* AVFoundation.framework */; };
-		DB8A007D16F2E09A005F87A6 /* CoreVideo.framework */ = {isa = PBXBuildFile; fileRef = DB8A007C16F2E09A005F87A6 /* CoreVideo.framework */; };
-		DB8A007F16F2E09E005F87A6 /* AssetsLibrary.framework */ = {isa = PBXBuildFile; fileRef = DB8A007E16F2E09E005F87A6 /* AssetsLibrary.framework */; };
-		DB8A008116F2E0A7005F87A6 /* libz.dylib */ = {isa = PBXBuildFile; fileRef = DB8A008016F2E0A7005F87A6 /* libz.dylib */; };
-		DB8A008316F2E0B0005F87A6 /* MobileCoreServices.framework */ = {isa = PBXBuildFile; fileRef = DB8A008216F2E0B0005F87A6 /* MobileCoreServices.framework */; };
-		DB8A008516F2E0B9005F87A6 /* SystemConfiguration.framework */ = {isa = PBXBuildFile; fileRef = DB8A008416F2E0B9005F87A6 /* SystemConfiguration.framework */; };
-		DB8A008716F2E0BE005F87A6 /* CFNetwork.framework */ = {isa = PBXBuildFile; fileRef = DB8A008616F2E0BE005F87A6 /* CFNetwork.framework */; };
-		DB8A008916F2E0C3005F87A6 /* CoreText.framework */ = {isa = PBXBuildFile; fileRef = DB8A008816F2E0C3005F87A6 /* CoreText.framework */; };
-		DB8A008B16F2E0CF005F87A6 /* GLKit.framework */ = {isa = PBXBuildFile; fileRef = DB8A008A16F2E0CF005F87A6 /* GLKit.framework */; };
-		DB8A008D16F2E0D3005F87A6 /* OpenGLES.framework */ = {isa = PBXBuildFile; fileRef = DB8A008C16F2E0D3005F87A6 /* OpenGLES.framework */; };
-		DB8A009216F2E497005F87A6 /* CoreMedia.framework */ = {isa = PBXBuildFile; fileRef = DB8A009116F2E497005F87A6 /* CoreMedia.framework */; };
-		DB8A00A416F2E859005F87A6 /* Inconsolata.otf */ = {isa = PBXBuildFile; fileRef = DB8A00A016F2E859005F87A6 /* Inconsolata.otf */; };
-		DB8A00A516F2E859005F87A6 /* SourceSansPro-Bold.otf */ = {isa = PBXBuildFile; fileRef = DB8A00A116F2E859005F87A6 /* SourceSansPro-Bold.otf */; };
-		DB8A00A616F2E859005F87A6 /* SourceSansPro-Regular.otf */ = {isa = PBXBuildFile; fileRef = DB8A00A216F2E859005F87A6 /* SourceSansPro-Regular.otf */; };
-		DB8A00A716F2E859005F87A6 /* SourceSansPro-Semibold.otf */ = {isa = PBXBuildFile; fileRef = DB8A00A316F2E859005F87A6 /* SourceSansPro-Semibold.otf */; };
-		DB8A015C16F73DFF005F87A6 /* HopScheduleTimer.codea */ = {isa = PBXBuildFile; fileRef = DB8A015B16F73DFF005F87A6 /* HopScheduleTimer.codea */; };
+		D32C405DAFA8DB9C82C69C2C /* LocalNotificationAddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF41BF85547D4699E1B8C8 /* LocalNotificationAddOn.m */; };
+		D68A48759BD929BBF82477E1 /* DisableScreenTimerAddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF4CA2BEF289E164FB55DE /* DisableScreenTimerAddOn.m */; };
+		DB0DC0AE18C459EC005F4723 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0DC0AD18C459EC005F4723 /* Images.xcassets */; };
+		DB0DC0B618C46085005F4723 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0DC0B518C46085005F4723 /* CoreImage.framework */; };
+		DB0DC0B818C4608A005F4723 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0DC0B718C4608A005F4723 /* CoreLocation.framework */; };
+		DB0DC0BA18C4608E005F4723 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0DC0B918C4608E005F4723 /* Accelerate.framework */; };
+		DB3B3F6317815CFE00A992DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3B3F6217815CFE00A992DB /* Security.framework */; };
+		DB5E404418CD80570001CC1F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5E404318CD80570001CC1F /* Social.framework */; };
+		DB6F85F817DDD381004434B4 /* AssetPacks in Resources */ = {isa = PBXBuildFile; fileRef = DB6F85F717DDD381004434B4 /* AssetPacks */; };
+		DB8A004716F2DBDA005F87A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A004616F2DBDA005F87A6 /* UIKit.framework */; };
+		DB8A004916F2DBDA005F87A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A004816F2DBDA005F87A6 /* Foundation.framework */; };
+		DB8A004B16F2DBDA005F87A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A004A16F2DBDA005F87A6 /* CoreGraphics.framework */; };
+		DB8A005116F2DBDA005F87A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB8A004F16F2DBDA005F87A6 /* InfoPlist.strings */; };
+		DB8A005316F2DBDA005F87A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8A005216F2DBDA005F87A6 /* main.m */; };
+		DB8A005716F2DBDA005F87A6 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB8A005616F2DBDA005F87A6 /* AppDelegate.mm */; };
+		DB8A006816F2E019005F87A6 /* libcodea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A006316F2E019005F87A6 /* libcodea.a */; };
+		DB8A006A16F2E019005F87A6 /* libtools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A006516F2E019005F87A6 /* libtools.a */; };
+		DB8A006B16F2E019005F87A6 /* RuntimeResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8A006616F2E019005F87A6 /* RuntimeResources.bundle */; };
+		DB8A006C16F2E019005F87A6 /* ToolsResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8A006716F2E019005F87A6 /* ToolsResources.bundle */; };
+		DB8A006F16F2E039005F87A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A006E16F2E039005F87A6 /* QuartzCore.framework */; };
+		DB8A007116F2E069005F87A6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007016F2E069005F87A6 /* CoreMotion.framework */; };
+		DB8A007516F2E073005F87A6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007416F2E073005F87A6 /* libicucore.dylib */; };
+		DB8A007716F2E084005F87A6 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007616F2E084005F87A6 /* OpenAL.framework */; };
+		DB8A007916F2E089005F87A6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007816F2E089005F87A6 /* AudioToolbox.framework */; };
+		DB8A007B16F2E096005F87A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007A16F2E096005F87A6 /* AVFoundation.framework */; };
+		DB8A007D16F2E09A005F87A6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007C16F2E09A005F87A6 /* CoreVideo.framework */; };
+		DB8A007F16F2E09E005F87A6 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A007E16F2E09E005F87A6 /* AssetsLibrary.framework */; };
+		DB8A008116F2E0A7005F87A6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008016F2E0A7005F87A6 /* libz.dylib */; };
+		DB8A008316F2E0B0005F87A6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008216F2E0B0005F87A6 /* MobileCoreServices.framework */; };
+		DB8A008516F2E0B9005F87A6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008416F2E0B9005F87A6 /* SystemConfiguration.framework */; };
+		DB8A008716F2E0BE005F87A6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008616F2E0BE005F87A6 /* CFNetwork.framework */; };
+		DB8A008916F2E0C3005F87A6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008816F2E0C3005F87A6 /* CoreText.framework */; };
+		DB8A008B16F2E0CF005F87A6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008A16F2E0CF005F87A6 /* GLKit.framework */; };
+		DB8A008D16F2E0D3005F87A6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A008C16F2E0D3005F87A6 /* OpenGLES.framework */; };
+		DB8A009216F2E497005F87A6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8A009116F2E497005F87A6 /* CoreMedia.framework */; };
+		DB8A00A416F2E859005F87A6 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB8A00A016F2E859005F87A6 /* Inconsolata.otf */; };
+		DB8A00A516F2E859005F87A6 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB8A00A116F2E859005F87A6 /* SourceSansPro-Bold.otf */; };
+		DB8A00A616F2E859005F87A6 /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB8A00A216F2E859005F87A6 /* SourceSansPro-Regular.otf */; };
+		DB8A00A716F2E859005F87A6 /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB8A00A316F2E859005F87A6 /* SourceSansPro-Semibold.otf */; };
+		DB8A015C16F73DFF005F87A6 /* HopScheduleTimer.codea in Resources */ = {isa = PBXBuildFile; fileRef = DB8A015B16F73DFF005F87A6 /* HopScheduleTimer.codea */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,25 +64,25 @@
 		DB8A004616F2DBDA005F87A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB8A004816F2DBDA005F87A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB8A004A16F2DBDA005F87A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DB8A004E16F2DBDA005F87A6 /* HopScheduleTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HopScheduleTimer-Info.plist; sourceTree = "<group>"; };
+		DB8A004E16F2DBDA005F87A6 /* HopScheduleTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HopScheduleTimer-Info.plist"; sourceTree = "<group>"; };
 		DB8A005016F2DBDA005F87A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB8A005216F2DBDA005F87A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DB8A005416F2DBDA005F87A6 /* HopScheduleTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopScheduleTimer-Prefix.pch; sourceTree = "<group>"; };
+		DB8A005416F2DBDA005F87A6 /* HopScheduleTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopScheduleTimer-Prefix.pch"; sourceTree = "<group>"; };
 		DB8A005516F2DBDA005F87A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB8A005616F2DBDA005F87A6 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		DB8A006316F2E019005F87A6 /* libcodea.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcodea.a; path = Libs/libcodea.a; sourceTree = "<group>"; };
 		DB8A006516F2E019005F87A6 /* libtools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtools.a; path = Libs/libtools.a; sourceTree = "<group>"; };
-		DB8A006616F2E019005F87A6 /* RuntimeResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; name = RuntimeResources.bundle; path = Libs/RuntimeResources.bundle; sourceTree = "<group>"; };
-		DB8A006716F2E019005F87A6 /* ToolsResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.plug-in; name = ToolsResources.bundle; path = Libs/ToolsResources.bundle; sourceTree = "<group>"; };
+		DB8A006616F2E019005F87A6 /* RuntimeResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RuntimeResources.bundle; path = Libs/RuntimeResources.bundle; sourceTree = "<group>"; };
+		DB8A006716F2E019005F87A6 /* ToolsResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ToolsResources.bundle; path = Libs/ToolsResources.bundle; sourceTree = "<group>"; };
 		DB8A006E16F2E039005F87A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DB8A007016F2E069005F87A6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		DB8A007416F2E073005F87A6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		DB8A007416F2E073005F87A6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		DB8A007616F2E084005F87A6 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DB8A007816F2E089005F87A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DB8A007A16F2E096005F87A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DB8A007C16F2E09A005F87A6 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		DB8A007E16F2E09E005F87A6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		DB8A008016F2E0A7005F87A6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DB8A008016F2E0A7005F87A6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DB8A008216F2E0B0005F87A6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DB8A008416F2E0B9005F87A6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DB8A008616F2E0BE005F87A6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -92,9 +92,9 @@
 		DB8A008E16F2E166005F87A6 /* CodeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeaViewController.h; sourceTree = "<group>"; };
 		DB8A009116F2E497005F87A6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DB8A00A016F2E859005F87A6 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
-		DB8A00A116F2E859005F87A6 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro-Bold.otf; sourceTree = "<group>"; };
-		DB8A00A216F2E859005F87A6 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro-Regular.otf; sourceTree = "<group>"; };
-		DB8A00A316F2E859005F87A6 /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro-Semibold.otf; sourceTree = "<group>"; };
+		DB8A00A116F2E859005F87A6 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		DB8A00A216F2E859005F87A6 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		DB8A00A316F2E859005F87A6 /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		DB8A015B16F73DFF005F87A6 /* HopScheduleTimer.codea */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HopScheduleTimer.codea; sourceTree = "<group>"; };
 		DBF44365170F00F20026A109 /* CodeaAddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeaAddon.h; sourceTree = "<group>"; };
 		DBF44367170F02580026A109 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lapi.h; sourceTree = "<group>"; };
@@ -111,39 +111,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB5E404418CD80570001CC1F /* Social.framework */,
-				DB0DC0BA18C4608E005F4723 /* Accelerate.framework */,
-				DB0DC0B818C4608A005F4723 /* CoreLocation.framework */,
-				DB0DC0B618C46085005F4723 /* CoreImage.framework */,
-				DB3B3F6317815CFE00A992DB /* Security.framework */,
-				DB8A009216F2E497005F87A6 /* CoreMedia.framework */,
-				DB8A008D16F2E0D3005F87A6 /* OpenGLES.framework */,
-				DB8A008B16F2E0CF005F87A6 /* GLKit.framework */,
-				DB8A008916F2E0C3005F87A6 /* CoreText.framework */,
-				DB8A008716F2E0BE005F87A6 /* CFNetwork.framework */,
-				DB8A008516F2E0B9005F87A6 /* SystemConfiguration.framework */,
-				DB8A008316F2E0B0005F87A6 /* MobileCoreServices.framework */,
-				DB8A004B16F2DBDA005F87A6 /* CoreGraphics.framework */,
-				DB8A008116F2E0A7005F87A6 /* libz.dylib */,
-				DB8A007F16F2E09E005F87A6 /* AssetsLibrary.framework */,
-				DB8A007D16F2E09A005F87A6 /* CoreVideo.framework */,
-				DB8A007B16F2E096005F87A6 /* AVFoundation.framework */,
-				DB8A007916F2E089005F87A6 /* AudioToolbox.framework */,
-				DB8A007716F2E084005F87A6 /* OpenAL.framework */,
-				DB8A007516F2E073005F87A6 /* libicucore.dylib */,
-				DB8A007116F2E069005F87A6 /* CoreMotion.framework */,
-				DB8A006F16F2E039005F87A6 /* QuartzCore.framework */,
-				DB8A004716F2DBDA005F87A6 /* UIKit.framework */,
-				DB8A004916F2DBDA005F87A6 /* Foundation.framework */,
-				DB8A006816F2E019005F87A6 /* libcodea.a */,
-				DB8A006A16F2E019005F87A6 /* libtools.a */,
+				DB5E404418CD80570001CC1F /* Social.framework in Frameworks */,
+				DB0DC0BA18C4608E005F4723 /* Accelerate.framework in Frameworks */,
+				DB0DC0B818C4608A005F4723 /* CoreLocation.framework in Frameworks */,
+				DB0DC0B618C46085005F4723 /* CoreImage.framework in Frameworks */,
+				DB3B3F6317815CFE00A992DB /* Security.framework in Frameworks */,
+				DB8A009216F2E497005F87A6 /* CoreMedia.framework in Frameworks */,
+				DB8A008D16F2E0D3005F87A6 /* OpenGLES.framework in Frameworks */,
+				DB8A008B16F2E0CF005F87A6 /* GLKit.framework in Frameworks */,
+				DB8A008916F2E0C3005F87A6 /* CoreText.framework in Frameworks */,
+				DB8A008716F2E0BE005F87A6 /* CFNetwork.framework in Frameworks */,
+				DB8A008516F2E0B9005F87A6 /* SystemConfiguration.framework in Frameworks */,
+				DB8A008316F2E0B0005F87A6 /* MobileCoreServices.framework in Frameworks */,
+				DB8A004B16F2DBDA005F87A6 /* CoreGraphics.framework in Frameworks */,
+				DB8A008116F2E0A7005F87A6 /* libz.dylib in Frameworks */,
+				DB8A007F16F2E09E005F87A6 /* AssetsLibrary.framework in Frameworks */,
+				DB8A007D16F2E09A005F87A6 /* CoreVideo.framework in Frameworks */,
+				DB8A007B16F2E096005F87A6 /* AVFoundation.framework in Frameworks */,
+				DB8A007916F2E089005F87A6 /* AudioToolbox.framework in Frameworks */,
+				DB8A007716F2E084005F87A6 /* OpenAL.framework in Frameworks */,
+				DB8A007516F2E073005F87A6 /* libicucore.dylib in Frameworks */,
+				DB8A007116F2E069005F87A6 /* CoreMotion.framework in Frameworks */,
+				DB8A006F16F2E039005F87A6 /* QuartzCore.framework in Frameworks */,
+				DB8A004716F2DBDA005F87A6 /* UIKit.framework in Frameworks */,
+				DB8A004916F2DBDA005F87A6 /* Foundation.framework in Frameworks */,
+				DB8A006816F2E019005F87A6 /* libcodea.a in Frameworks */,
+				DB8A006A16F2E019005F87A6 /* libtools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB8A003A16F2DBDA005F87A6 /*  */ = {
+		DB8A003A16F2DBDA005F87A6 = {
 			isa = PBXGroup;
 			children = (
 				DB8A015B16F73DFF005F87A6 /* HopScheduleTimer.codea */,
@@ -278,25 +278,30 @@
 			name = HopScheduleTimer;
 			productName = HopScheduleTimer;
 			productReference = DB8A004316F2DBDA005F87A6 /* HopScheduleTimer.app */;
-			productType = com.apple.product-type.application;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB8A003B16F2DBDA005F87A6 /* Project Object */ = {
+		DB8A003B16F2DBDA005F87A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = MyCompany;
+				TargetAttributes = {
+					DB8A004216F2DBDA005F87A6 = {
+						DevelopmentTeam = 6QCLRYZDZE;
+					};
+				};
 			};
-			buildConfigurationList = DB8A003E16F2DBDA005F87A6 /* Build configuration list for PBXProject "Unity-iPhone" */;
+			buildConfigurationList = DB8A003E16F2DBDA005F87A6 /* Build configuration list for PBXProject "HopScheduleTimer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = DB8A003A16F2DBDA005F87A6 /*  */;
+			mainGroup = DB8A003A16F2DBDA005F87A6;
 			productRefGroup = DB8A004416F2DBDA005F87A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,16 +316,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8A005116F2DBDA005F87A6 /* InfoPlist.strings */,
-				DB8A006B16F2E019005F87A6 /* RuntimeResources.bundle */,
-				DB8A006C16F2E019005F87A6 /* ToolsResources.bundle */,
-				DB8A00A416F2E859005F87A6 /* Inconsolata.otf */,
-				DB8A00A516F2E859005F87A6 /* SourceSansPro-Bold.otf */,
-				DB8A00A616F2E859005F87A6 /* SourceSansPro-Regular.otf */,
-				DB8A00A716F2E859005F87A6 /* SourceSansPro-Semibold.otf */,
-				DB0DC0AE18C459EC005F4723 /* Images.xcassets */,
-				DB8A015C16F73DFF005F87A6 /* HopScheduleTimer.codea */,
-				DB6F85F817DDD381004434B4 /* AssetPacks */,
+				DB8A005116F2DBDA005F87A6 /* InfoPlist.strings in Resources */,
+				DB8A006B16F2E019005F87A6 /* RuntimeResources.bundle in Resources */,
+				DB8A006C16F2E019005F87A6 /* ToolsResources.bundle in Resources */,
+				DB8A00A416F2E859005F87A6 /* Inconsolata.otf in Resources */,
+				DB8A00A516F2E859005F87A6 /* SourceSansPro-Bold.otf in Resources */,
+				DB8A00A616F2E859005F87A6 /* SourceSansPro-Regular.otf in Resources */,
+				DB8A00A716F2E859005F87A6 /* SourceSansPro-Semibold.otf in Resources */,
+				DB0DC0AE18C459EC005F4723 /* Images.xcassets in Resources */,
+				DB8A015C16F73DFF005F87A6 /* HopScheduleTimer.codea in Resources */,
+				DB6F85F817DDD381004434B4 /* AssetPacks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,14 +352,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8A005316F2DBDA005F87A6 /* main.m */,
-				DB8A005716F2DBDA005F87A6 /* AppDelegate.mm */,
-				D68A48759BD929BBF82477E1 /* DisableScreenTimerAddOn.m */,
-				D32C405DAFA8DB9C82C69C2C /* LocalNotificationAddOn.m */,
+				DB8A005316F2DBDA005F87A6 /* main.m in Sources */,
+				DB8A005716F2DBDA005F87A6 /* AppDelegate.mm in Sources */,
+				D68A48759BD929BBF82477E1 /* DisableScreenTimerAddOn.m in Sources */,
+				D32C405DAFA8DB9C82C69C2C /* LocalNotificationAddOn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB8A004F16F2DBDA005F87A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB8A005016F2DBDA005F87A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DB8A005E16F2DBDA005F87A6 /* Debug */ = {
@@ -421,20 +437,21 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HopScheduleTimer/HopScheduleTimer-Prefix.pch;
-				INFOPLIST_FILE = HopScheduleTimer/HopScheduleTimer-Info.plist;
+				GCC_PREFIX_HEADER = "HopScheduleTimer/HopScheduleTimer-Prefix.pch";
+				INFOPLIST_FILE = "HopScheduleTimer/HopScheduleTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs\"",
 				);
 				OTHER_LDFLAGS = (
-					-ObjC,
-					-all_load,
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -445,20 +462,21 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HopScheduleTimer/HopScheduleTimer-Prefix.pch;
-				INFOPLIST_FILE = HopScheduleTimer/HopScheduleTimer-Info.plist;
+				GCC_PREFIX_HEADER = "HopScheduleTimer/HopScheduleTimer-Prefix.pch";
+				INFOPLIST_FILE = "HopScheduleTimer/HopScheduleTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs\"",
 				);
 				OTHER_LDFLAGS = (
-					-ObjC,
-					-all_load,
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,7 +484,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB8A003E16F2DBDA005F87A6 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+		DB8A003E16F2DBDA005F87A6 /* Build configuration list for PBXProject "HopScheduleTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB8A005E16F2DBDA005F87A6 /* Debug */,
@@ -485,17 +503,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin PBXVariantGroup section */
-		DB8A004F16F2DBDA005F87A6 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB8A005016F2DBDA005F87A6 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 	};
-	rootObject = DB8A003B16F2DBDA005F87A6 /* Project Object */;
+	rootObject = DB8A003B16F2DBDA005F87A6 /* Project object */;
 }
