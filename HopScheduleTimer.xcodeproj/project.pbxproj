@@ -60,7 +60,7 @@
 		DB3B3F6217815CFE00A992DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DB5E404318CD80570001CC1F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DB6F85F717DDD381004434B4 /* AssetPacks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AssetPacks; sourceTree = SOURCE_ROOT; };
-		DB8A004316F2DBDA005F87A6 /* Hop Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hop Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8A004316F2DBDA005F87A6 /* HopScheduleTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopScheduleTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A004616F2DBDA005F87A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB8A004816F2DBDA005F87A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB8A004A16F2DBDA005F87A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,7 +156,7 @@
 		DB8A004416F2DBDA005F87A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB8A004316F2DBDA005F87A6 /* Hop Timer.app */,
+				DB8A004316F2DBDA005F87A6 /* HopScheduleTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			);
 			name = HopScheduleTimer;
 			productName = HopScheduleTimer;
-			productReference = DB8A004316F2DBDA005F87A6 /* Hop Timer.app */;
+			productReference = DB8A004316F2DBDA005F87A6 /* HopScheduleTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -450,7 +450,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "Hop Timer";
+				PRODUCT_NAME = HopScheduleTimer;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -475,7 +475,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "Hop Timer";
+				PRODUCT_NAME = HopScheduleTimer;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
